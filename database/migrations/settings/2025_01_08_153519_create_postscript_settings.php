@@ -6,11 +6,12 @@ return new class extends SettingsMigration
 {
     public function up(): void
     {
-        $this->migrator->add('skeleton.enabled', false);
+        $this->migrator->add('postscript.enabled', false);
+        $this->migrator->add('postscript.enabled', false);
     }
 
     public function down()
     {
-        $this->migrator->delete('skeleton.enabled');
+        $this->migrator->delete('postscript.enabled');
     }
 };
