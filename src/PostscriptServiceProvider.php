@@ -4,6 +4,7 @@ namespace Astrogoat\Postscript;
 
 use Helix\Lego\Apps\App;
 use Helix\Lego\Apps\AppPackageServiceProvider;
+use Helix\Lego\Apps\Services\IncludeFrontendViews;
 use Spatie\LaravelPackageTools\Package;
 use Astrogoat\Postscript\Settings\PostscriptSettings;
 
@@ -19,7 +20,10 @@ class PostscriptServiceProvider extends AppPackageServiceProvider
                 __DIR__ . '/../database/migrations/settings',
             ])
             ->backendRoutes(__DIR__.'/../routes/backend.php')
-            ->frontendRoutes(__DIR__.'/../routes/frontend.php');
+            ->frontendRoutes(__DIR__.'/../routes/frontend.php')
+            ->includeFrontendViews(function (IncludeFrontendViews $views) {
+                return $views->addToHead(['postscript::script'], 100);
+            });
     }
 
     public function configurePackage(Package $package): void

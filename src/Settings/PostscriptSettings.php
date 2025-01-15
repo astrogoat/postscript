@@ -5,14 +5,14 @@ namespace Astrogoat\Postscript\Settings;
 use Helix\Lego\Settings\AppSettings;
 use Illuminate\Validation\Rule;
 
-class PostscriptSettings extends AppSettings
+class   PostscriptSettings extends AppSettings
 {
-    // public string $url;
+     public string $shop_id;
 
     public function rules(): array
     {
         return [
-//            'url' => Rule::requiredIf($this->enabled === true), // Example, modify to fit your need.
+            'shop_id' => Rule::requiredIf($this->enabled === true),
         ];
     }
 
