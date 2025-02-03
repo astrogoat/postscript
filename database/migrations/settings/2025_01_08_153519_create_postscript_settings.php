@@ -13,5 +13,6 @@ return new class extends SettingsMigration
     public function down()
     {
         $this->migrator->delete('postscript.enabled');
+        $this->migrator->delete('postscript.shop_id');
     }
 };
