@@ -5,9 +5,9 @@ namespace Astrogoat\Postscript\Settings;
 use Helix\Lego\Settings\AppSettings;
 use Illuminate\Validation\Rule;
 
-class   PostscriptSettings extends AppSettings
+class PostscriptSettings extends AppSettings
 {
-     public string $shop_id;
+    public string $shop_id;
 
     public function rules(): array
     {

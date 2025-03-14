@@ -2,11 +2,11 @@
 
 namespace Astrogoat\Postscript;
 
+use Astrogoat\Postscript\Settings\PostscriptSettings;
 use Helix\Lego\Apps\App;
 use Helix\Lego\Apps\AppPackageServiceProvider;
 use Helix\Lego\Apps\Services\IncludeFrontendViews;
 use Spatie\LaravelPackageTools\Package;
-use Astrogoat\Postscript\Settings\PostscriptSettings;
 
 class PostscriptServiceProvider extends AppPackageServiceProvider
 {

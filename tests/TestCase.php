@@ -2,9 +2,9 @@
 
 namespace Astrogoat\Postscript\Tests;
 
+use Astrogoat\Postscript\PostscriptServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Astrogoat\Postscript\PostscriptServiceProvider;
 
 class TestCase extends Orchestra
 {
