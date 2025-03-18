@@ -25,17 +25,17 @@
                 window.postscript.event('page_view', {
                     "shop_id": {{ settings(Astrogoat\Postscript\Settings\PostscriptSettings::class, 'shop_id') }},
                     "url": '{{ request()->url() }}',
-                    "search_params": {"variant": data.variant_id},
+                    "search_params": {"variant": data.product_id},
                     "page_type": "product",
                     "referrer": "{{ request()->headers->get('referer') }}",
                     "resource": {
                         "category": data.type,
-                        "name": data.name,
+                        "name": data.title,
                         "price_in_cents": data.price,
                         "resource_id": data.product_id,
                         "resource_type": "product",
                         "sku": data.sku,
-                        "variant_id": data.variant_id,
+                        "variant_id": data.product_id,
                     }
                 });
             })
