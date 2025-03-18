@@ -25,7 +25,7 @@
                 window.postscript.event('page_view', {
                     "shop_id": {{ settings(Astrogoat\Postscript\Settings\PostscriptSettings::class, 'shop_id') }},
                     "url": '{{ request()->url() }}',
-                    "search_params": {"variant": data.product_id},
+                    "search_params": {"variant": data.variant_id},
                     "page_type": "product",
                     "referrer": "{{ request()->headers->get('referer') }}",
                     "resource": {
@@ -35,7 +35,7 @@
                         "resource_id": data.product_id,
                         "resource_type": "product",
                         "sku": data.sku,
-                        "variant_id": data.product_id,
+                        "variant_id": data.variant_id,
                     }
                 });
             })
